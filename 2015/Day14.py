@@ -47,7 +47,7 @@ for r in reindeer_list:
   rest_remaining.append(0)    # .. no resting
 
 # Now we analyze every second of the race
-for i in range(total_time):
+for _ in range(total_time):
   for i, r in enumerate(reindeer_list):
     # If the reindeer is running, update the position
     if( running[i] ):
@@ -66,7 +66,7 @@ for i in range(total_time):
         run_remaining[i] = r[2]
   # Now we evaluate all the positions and give 1 point for everyone at the leading position
   max_position = max(position)
-  for i, r in enumerate(reindeer_list):
+  for i in range(len(reindeer_list)):
     if( position[i] == max_position ):
       points[i] += 1
   
